@@ -1,25 +1,18 @@
-//document.getElementById("count").innerText = 5
- 
-
- let countEl = document.getElementById("count-el")
-
-console.log(countEl)
 let count = 0
- 
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+
 function increment() {
-    console.log("clicked")
     count += 1
-    countEl.innerText = count
-    console.log(count)
-} 
+    countEl.textContent = count
+}
 
 function save() {
-    console.log(count)
+    let countStr = count + " - "
+    saveEl.textContent += countStr
+    countEl.textContent = 0
+    count = 0
 }
-/* let name = "Kaspar"
-let greeting = "Tere, minu nimi on "
 
-let mygreeting = greeting + name
 
-console.log(mygreeting) */
-
+console.log("Let's count people on the subway!")
